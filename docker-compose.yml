@@ -1,0 +1,11 @@
+db:
+  build: postgresql
+  restart: always
+  ports:
+    - 5432:5432
+  hostname: db
+  environment:
+    - POSTGRES_USER=nuxeo
+    - POSTGRES_PASSWORD=nuxeo
+  volumes:
+    - /data-volume/postgres:/var/lib/postgresql/data/
